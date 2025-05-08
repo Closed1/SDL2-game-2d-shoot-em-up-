@@ -1,5 +1,6 @@
-#include "structs.h"
 #include <SDL2/SDL.h>
+#include "structs.h"
+#include "draw.h" 
 
 void prepareScene(void){
   SDL_SetRenderDrawColor(app.renderer,96,128,255,255);
