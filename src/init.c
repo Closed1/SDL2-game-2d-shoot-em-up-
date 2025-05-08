@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "structs.h" 
 #include "defs.h"
+#include "init.h" 
 
 void initSDL(void){
   App_t app;
