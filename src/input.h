@@ -3,4 +3,4 @@
 
 void doInput(void);
 
-#endif // !INPUT_H
+#endif 
