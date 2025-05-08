@@ -4,4 +4,4 @@
 void prepareScene(void);
 void presentScene(void);
 
-#endif // !DRAW_H
+#endif 
