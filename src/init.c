@@ -4,8 +4,9 @@
 #include "defs.h"
 #include "init.h" 
 
+App_t app;
+
 void initSDL(void){
-  App_t app;
   int renderer_Flags = SDL_RENDERER_ACCELERATED;
   int window_Flags = 0;
 
