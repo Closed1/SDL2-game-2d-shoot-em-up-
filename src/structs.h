@@ -7,3 +7,4 @@ typedef struct{
   SDL_Window *window;
 }App_t;
 
+extern App_t app;
