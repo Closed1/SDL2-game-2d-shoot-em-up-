@@ -1,3 +1,0 @@
-/home/closed1/projects/shoot2Dgame/build/CMakeFiles/ShootEmUp.dir
-/home/closed1/projects/shoot2Dgame/build/CMakeFiles/edit_cache.dir
-/home/closed1/projects/shoot2Dgame/build/CMakeFiles/rebuild_cache.dir

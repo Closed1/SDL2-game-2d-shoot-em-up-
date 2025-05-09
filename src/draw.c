@@ -7,7 +7,7 @@
 #include "draw.h" 
 
 void prepareScene(void){
-  SDL_SetRenderDrawColor(app.renderer,128,128,255,255);
+  SDL_SetRenderDrawColor(app.renderer,255,95,21,255);
   SDL_RenderClear(app.renderer);
 }
 
@@ -22,6 +22,10 @@ SDL_Texture *loadTexture(char *filename){
   SDL_LogMessage(SDL_LOG_CATEGORY_APPLICATION,SDL_LOG_PRIORITY_INFO,"Loading %s",filename);
 
   texture =IMG_LoadTexture(app.renderer,filename);
+
+  if (!texture) {
+    SDL_Log("Failed to load texture: %s", IMG_GetError());
+}
 
   return texture;
 }
