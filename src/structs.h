@@ -8,3 +8,11 @@ typedef struct{
 }App_t;
 
 extern App_t app;
+
+typedef struct{
+  int x;
+  int y;
+  SDL_Texture *texture;
+}Entity_t;
+
+extern Entity_t player;

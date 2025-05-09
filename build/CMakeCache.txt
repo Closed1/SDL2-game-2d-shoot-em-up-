@@ -28,7 +28,7 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:STRING=/usr/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -54,7 +54,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_C_COMPILER:STRING=/usr/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -238,6 +238,12 @@ ShootEmUp_SOURCE_DIR:STATIC=/home/closed1/projects/shoot2Dgame
 
 //Path to a library.
 pkgcfg_lib_SDL2_SDL2:FILEPATH=/usr/lib/libSDL2.so
+
+//Path to a library.
+pkgcfg_lib_SDL2_image_SDL2:FILEPATH=/usr/lib/libSDL2.so
+
+//Path to a library.
+pkgcfg_lib_SDL2_image_SDL2_image:FILEPATH=/usr/lib/libSDL2_image.so
 
 
 ########################
@@ -430,13 +436,58 @@ SDL2_STATIC_LIBS_L:INTERNAL=
 SDL2_STATIC_LIBS_OTHER:INTERNAL=
 SDL2_STATIC_LIBS_PATHS:INTERNAL=
 SDL2_VERSION:INTERNAL=2.32.54
+SDL2_image_CFLAGS:INTERNAL=-I/usr/include/SDL2;-I/usr/include;-D_GNU_SOURCE=1;-D_REENTRANT;-I/usr/include/libpng16;-DHWY_SHARED_DEFINE;-DAVIF_DLL;-I/usr/include/rav1e;-I/usr/include/svt-av1;-DEB_DLL;-I/usr/include/webp
+SDL2_image_CFLAGS_I:INTERNAL=
+SDL2_image_CFLAGS_OTHER:INTERNAL=-D_GNU_SOURCE=1;-D_REENTRANT;-DHWY_SHARED_DEFINE;-DAVIF_DLL;-DEB_DLL
+SDL2_image_FOUND:INTERNAL=1
+SDL2_image_INCLUDEDIR:INTERNAL=/usr/include
+SDL2_image_INCLUDE_DIRS:INTERNAL=/usr/include/SDL2;/usr/include;/usr/include/libpng16;/usr/include/rav1e;/usr/include/svt-av1;/usr/include/webp
+SDL2_image_LDFLAGS:INTERNAL=-L/usr/lib;-lSDL2_image;-lSDL2
+SDL2_image_LDFLAGS_OTHER:INTERNAL=
+SDL2_image_LIBDIR:INTERNAL=/usr/lib
+SDL2_image_LIBRARIES:INTERNAL=SDL2_image;SDL2
+SDL2_image_LIBRARY_DIRS:INTERNAL=/usr/lib
+SDL2_image_LIBS:INTERNAL=
+SDL2_image_LIBS_L:INTERNAL=
+SDL2_image_LIBS_OTHER:INTERNAL=
+SDL2_image_LIBS_PATHS:INTERNAL=
+SDL2_image_MODULE_NAME:INTERNAL=SDL2_image
+SDL2_image_PREFIX:INTERNAL=/usr
+SDL2_image_SDL2_image_INCLUDEDIR:INTERNAL=
+SDL2_image_SDL2_image_LIBDIR:INTERNAL=
+SDL2_image_SDL2_image_PREFIX:INTERNAL=
+SDL2_image_SDL2_image_VERSION:INTERNAL=
+SDL2_image_SLD2_image_INCLUDEDIR:INTERNAL=
+SDL2_image_SLD2_image_LIBDIR:INTERNAL=
+SDL2_image_SLD2_image_PREFIX:INTERNAL=
+SDL2_image_SLD2_image_VERSION:INTERNAL=
+SDL2_image_STATIC_CFLAGS:INTERNAL=-I/usr/include/SDL2;-I/usr/include;-D_GNU_SOURCE=1;-D_REENTRANT;-I/usr/include/libpng16;-DHWY_SHARED_DEFINE;-DAVIF_DLL;-I/usr/include/rav1e;-I/usr/include/svt-av1;-DEB_DLL;-I/usr/include/webp;-DJXL_STATIC_DEFINE;-DJXL_CMS_STATIC_DEFINE;-DLZMA_API_STATIC;-UAVIF_DLL;-UEB_DLL
+SDL2_image_STATIC_CFLAGS_I:INTERNAL=
+SDL2_image_STATIC_CFLAGS_OTHER:INTERNAL=-D_GNU_SOURCE=1;-D_REENTRANT;-DHWY_SHARED_DEFINE;-DAVIF_DLL;-DEB_DLL;-DJXL_STATIC_DEFINE;-DJXL_CMS_STATIC_DEFINE;-DLZMA_API_STATIC;-UAVIF_DLL;-UEB_DLL
+SDL2_image_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/SDL2;/usr/include;/usr/include/libpng16;/usr/include/rav1e;/usr/include/svt-av1;/usr/include/webp
+SDL2_image_STATIC_LDFLAGS:INTERNAL=-L/usr/lib;-lSDL2_image;-lSDL2;-lpng16;-lm;-lz;-lm;-ljxl;-lm;-lstdc++;-lhwy;-lbrotlienc;-lbrotlidec;-lbrotlicommon;-ljxl_cms;-lm;-lstdc++;-ltiff;-ljbig;-lm;-lzstd;-llzma;-pthread;-lpthread;-ljpeg;-lz;-lavif;-lyuv;-ldav1d;-pthread;-ldl;-lrav1e;-lgcc_s;-lutil;-lrt;-lpthread;-lm;-ldl;-lc;-lSvtAv1Enc;-lpthread;-lm;-laom;-lm;-lwebpdemux;-lwebp;-lm;-lsharpyuv;-lm
+SDL2_image_STATIC_LDFLAGS_OTHER:INTERNAL=-pthread;-pthread
+SDL2_image_STATIC_LIBDIR:INTERNAL=
+SDL2_image_STATIC_LIBRARIES:INTERNAL=SDL2_image;SDL2;png16;m;z;m;jxl;m;stdc++;hwy;brotlienc;brotlidec;brotlicommon;jxl_cms;m;stdc++;tiff;jbig;m;zstd;lzma;pthread;jpeg;z;avif;yuv;dav1d;dl;rav1e;gcc_s;util;rt;pthread;m;dl;c;SvtAv1Enc;pthread;m;aom;m;webpdemux;webp;m;sharpyuv;m
+SDL2_image_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib
+SDL2_image_STATIC_LIBS:INTERNAL=
+SDL2_image_STATIC_LIBS_L:INTERNAL=
+SDL2_image_STATIC_LIBS_OTHER:INTERNAL=
+SDL2_image_STATIC_LIBS_PATHS:INTERNAL=
+SDL2_image_VERSION:INTERNAL=2.8.8
 SDL2_sdl2_INCLUDEDIR:INTERNAL=
 SDL2_sdl2_LIBDIR:INTERNAL=
 SDL2_sdl2_PREFIX:INTERNAL=
 SDL2_sdl2_VERSION:INTERNAL=
 __pkg_config_arguments_SDL2:INTERNAL=REQUIRED;sdl2
+__pkg_config_arguments_SDL2_image:INTERNAL=REQUIRED;SDL2_image
 __pkg_config_checked_SDL2:INTERNAL=1
+__pkg_config_checked_SDL2_image:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_SDL2_SDL2
 pkgcfg_lib_SDL2_SDL2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_SDL2_image_SDL2
+pkgcfg_lib_SDL2_image_SDL2-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib_SDL2_image_SDL2_image
+pkgcfg_lib_SDL2_image_SDL2_image-ADVANCED:INTERNAL=1
 prefix_result:INTERNAL=/usr/lib
 

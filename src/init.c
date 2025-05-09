@@ -1,4 +1,5 @@
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <stdio.h>
 #include "structs.h" 
 #include "defs.h"
@@ -9,6 +10,7 @@ App_t app;
 void initSDL(void){
   int renderer_Flags = SDL_RENDERER_ACCELERATED;
   int window_Flags = 0;
+  IMG_Init(IMG_INIT_PNG|IMG_INIT_JPG);
 
   if(SDL_Init(SDL_INIT_VIDEO)<0){
 
@@ -33,6 +35,6 @@ void initSDL(void){
   }
 
 
-  
+
 
 }
