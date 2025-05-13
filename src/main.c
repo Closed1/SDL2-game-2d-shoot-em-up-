@@ -22,6 +22,23 @@ int main(int argc, char *argv[])
 
     doInput();
 
+    if(player.input.up){
+      player.y -= 6;
+    }
+    
+    if(player.input.down){
+      player.y += 6;
+    }
+
+    if(player.input.left){
+      player.x -= 6;
+    }
+
+    if(player.input.right){
+      player.x += 6;
+    }
+
+
     blit(player.texture,player.x,player.y);
 
     presentScene();
