@@ -3,6 +3,7 @@
 #include "init.h" 
 #include "draw.h"
 #include "input.h" 
+#include "defs.h" 
 
 Entity_t player;
 
@@ -13,8 +14,8 @@ int main(int argc, char *argv[])
 
   initSDL();
 
-  player.x =100;
-  player.y =100;
+  player.x = 0;
+  player.y = (SCREEN_HEIGHT-128)/2;
   player.texture =loadTexture("assets/jet/jet1.png");
 
   while(1){
