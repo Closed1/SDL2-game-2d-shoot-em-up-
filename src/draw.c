@@ -5,6 +5,7 @@
 #include <string.h>
 #include "structs.h"
 #include "draw.h" 
+#include "defs.h" 
 
 void prepareScene(void){
   SDL_SetRenderDrawColor(app.renderer,255,95,21,255);
@@ -38,6 +39,22 @@ void blit(SDL_Texture *texture, int x, int y){
   dest.y = y;
   dest.w = 128;
   dest.h = 128;
+  
+  //stoping player from exiting the x axis border
+
+  if(dest.x<0)
+    dest.x=0;
+
+  if(dest.x>SCREEN_WIDTH - dest.w)
+    dest.x = SCREEN_WIDTH - dest.w;
+
+  // y axis
+  if(dest.y<0)
+    dest.y=0;
+
+  if(dest.y>SCREEN_HEIGHT - dest.h)
+    dest.y = SCREEN_HEIGHT - dest.h;
+
   
 //  SDL_QueryTexture(texture,NULL,NULL,&dest.w,&dest.h);
 
